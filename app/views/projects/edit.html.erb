@@ -1,0 +1,22 @@
+<h1>Edit a project</h1>
+
+<%=form_for @project do |pr| %>
+<%= @project.errors.full_messages.join(',') %>
+
+<div>
+  <%= pr.label :title %>
+  <%= pr.text_field :title %>
+</div>
+
+<div>
+  <%= pr.label :description %>
+  <%= pr.text_area :description %>
+</div>
+
+<div>
+  <%= pr.label :due_date %>
+  <%= pr.text_field :due_date %>
+</div>
+
+<%=   pr.submit%>
+<% end %>
